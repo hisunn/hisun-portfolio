@@ -1,0 +1,38 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+  @media (prefers-reduced-motion: reduce) {
+    html {
+      scroll-behavior: auto;
+    }
+  }
+  body {
+    @apply bg-paper text-ink font-sans antialiased;
+  }
+  ::selection {
+    @apply bg-approved text-paper;
+  }
+  :focus-visible {
+    @apply outline-none ring-2 ring-approved ring-offset-2 ring-offset-paper;
+  }
+}
+
+@layer components {
+  .field-label {
+    @apply font-mono text-[11px] font-medium uppercase tracking-[0.18em] text-muted;
+  }
+  .btn-primary {
+    @apply inline-flex items-center gap-2 rounded-md bg-ink px-5 py-2.5 font-mono text-sm text-paper transition hover:bg-approved active:scale-[0.98];
+  }
+  .btn-ghost {
+    @apply inline-flex items-center gap-2 rounded-md border border-line bg-transparent px-5 py-2.5 font-mono text-sm text-ink transition hover:border-ink active:scale-[0.98];
+  }
+  .input-field {
+    @apply w-full rounded-md border border-line bg-white px-3.5 py-2.5 text-sm text-ink placeholder:text-muted/60 focus:border-approved focus:outline-none focus:ring-1 focus:ring-approved;
+  }
+}
