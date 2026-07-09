@@ -1,7 +1,7 @@
 export interface Project {
   slug: string
   name: string
-  status: 'WIP' | 'IN DEVELOPMENT' | 'CASE STUDY'
+  status: 'LIVE' | 'WIP' | 'CASE STUDY'
   summary: string
   stack: string[]
   demoUrl?: string
