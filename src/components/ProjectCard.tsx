@@ -2,7 +2,7 @@ import { ExternalLink, Github } from 'lucide-react'
 import { Project } from '@/types/content'
 
 const STATUS_STYLES: Record<Project['status'], string> = {
-  LIVE: 'bg-approved-soft text-approved-dark',
+  'LIVE': 'bg-approved-soft text-approved-dark',
   'WIP': 'bg-amber-100 text-amber-800',
   'CASE STUDY': 'bg-paper text-muted border border-line',
 }
